@@ -1,0 +1,271 @@
+:root {
+
+    --clr-purple: hsl(259, 100%, 65%);
+    --clr-light-red: hsl(0, 100%, 67%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);  /*White (lightest color)*/
+    --clr-neutral-200: hsl(0, 0%, 94%);
+    --clr-neutral-300: hsl(0, 0%, 86%);
+
+    --clr-neutral-600: hsl(0, 1%, 44%);
+    --clr-neutral-900: hsl(0, 0%, 8%); /*Off black (darkest color)*/
+
+    --clr-text: var(--clr-neutral-900);
+    --clr-error: var(--clr-light-red); 
+
+    --bg-100: var(--clr-neutral-100);
+    --bg-200: var(--clr-neutral-200);
+    --bg-300: var(--clr-neutral-300);
+
+    --ff-primary: "Poppins", sans-serif;
+
+    /* Font Size */
+    --fs-100: 0.25rem;
+    --fs-200: 0.5rem;
+    --fs-300: 0.75rem;
+    --fs-400: 1rem; /* 16px */
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+
+    --fs-input: var(--fs-800);
+
+    /* Font Weight */
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-xbold: 800;
+
+    /* For spacing, padding, margin, border */
+    --spacer-100: 0.25rem;
+    --spacer-200: 0.5rem;
+    --spacer-300: 0.75rem;
+    --spacer-400: 1rem;
+    --spacer-500: 1.5rem;
+    --spacer-600: 2rem;
+    --spacer-700: 3rem;
+    --spacer-800: 4rem;
+    --spacer-900: 5rem;
+
+    /* Flow */
+    --gap: 2rem;
+
+    
+}
+
+
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff-primary);
+    background-color: var(--clr-neutral-300);
+  }
+
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
+label {
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-600);
+    letter-spacing: 2px;
+    font-size: var(--fs-400);
+}
+
+/* For Chrome, Safari, Edge, and Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    border-radius: var(--spacer-200);
+    border-color: var(--clr-neutral-300);
+    border-width: 0.5px;
+    border-style: solid;
+    padding:var(--spacer-200) var(--spacer-400);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-800);
+    margin-block: var(--spacer-200);
+    width: 90%;
+}
+
+input[type="number"]:focus {
+    outline:none;
+    border-color: var(--clr-purple);
+    caret-color: var(--clr-purple); 
+}
+/* 
+input[type="number"]:invalid {
+    border-color: var(--clr-light-red);
+} */
+
+
+button {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 0;
+    width: 5em;
+    height: 5em;
+    background-color: var(--clr-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img {
+    width: 50%;
+}
+
+
+button:hover {
+    background-color: var(--clr-neutral-900);
+}
+
+
+
+/* composition */
+.wrapper {
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    gap:0.5rem;
+    flex-flow: column none;
+    justify-content: flex-start;
+    width: 80%;
+}
+
+.input__number {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+}
+
+.divider__line {
+    width: 85%;
+    border-bottom: 2px solid var(--clr-neutral-300);
+}
+
+.divider > .divider__line:last-child {
+    display: none;
+}   
+
+.outputs {
+    margin-top: var(--spacer-400);
+}
+
+.output__no, .output__unit {
+    font-size: 6rem;
+    font-style: italic;
+    font-weight: var(--fw-xbold);
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.output__no {
+    color: var(--clr-purple);
+}
+
+.output__no:after {
+  content: " ";
+}
+
+/* Utilities */
+
+.error_text {
+    font-size: var(--fs-300);
+    color:var(--clr-light-red);
+    font-style: italic;
+}
+
+
+/* block */
+.card {
+    border-radius: var(--spacer-400) var(--spacer-400) 10rem var(--spacer-400);
+    background-color: var(--clr-neutral-100);
+    max-width: 45em;
+    padding: var(--spacer-700);
+    margin: var(--spacer-400);
+}
+
+
+@media  screen and (max-width: 580px)  {
+
+
+    label {
+        font-size: var(--fs-300);
+    }
+
+
+    input[type=number] {
+        width: 100%;
+        font-size: var(--fs-500);
+        padding: var(--spacer-200) var(--spacer-200);
+        
+    }
+
+    button {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .input {
+        width: 100%;
+        gap:1rem;
+    }
+
+    .divider {
+        margin-block: var(--spacer-500);
+    }
+
+    .card {
+        border-bottom-right-radius: 6rem;
+        padding: var(--spacer-700) var(--spacer-500);
+    }
+
+    .divider__line {
+        width: 40%;
+    }
+
+    .divider > .divider__line:last-child {
+        display: block;
+    }
+
+    .output__no, .output__unit {
+        font-size: 3.5rem;
+    }
+}
