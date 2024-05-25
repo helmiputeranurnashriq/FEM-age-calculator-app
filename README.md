@@ -44,8 +44,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My Github](hgithub.com/helmiputeranurnashriq/FEM-age-calculator-app)
-- Live Site URL: [HPNA Age Calculator App]([https://your-live-site-url.com](https://hpna-fem-age-calculator-app-one.vercel.app/))
+- Solution URL: [My Github]([hgithub.com/helmiputeranurnashriq/FEM-age-calculator-app](https://github.com/helmiputeranurnashriq/FEM-age-calculator-app/tree/main))
+- Live Site URL: [HPNA Age Calculator App](https://hpna-fem-age-calculator-app-one.vercel.app/)
 
 ## My process
 
